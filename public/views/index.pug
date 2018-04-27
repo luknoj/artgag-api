@@ -1,0 +1,35 @@
+html 
+  head
+    title= title
+    link(rel='stylesheet', href='../css/api.css')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto')
+    link(rel='stylesheet', href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700')
+  body
+  div(class="container-fluid")
+    header(class='row header-style')
+        div(class='col-3')
+          div(class='text-center header-style__logo')
+            div(class='header-style__logo__inside bg-2')
+            div(class='header-style__logo__inside bg-1')
+            div(class='header-style__logo__text header-style__logo__text--first')
+              h2(class='header-style__text') Art
+            div(class='header-style__logo__text header-style__logo__text--second')
+              h3(class='header-style__text') gag
+        div(class='col-9 text-center')
+          h1(class='header-style__text my-4')= message
+    nav(class='row')
+        div(class='col-12 text-center')
+          ul
+            li a
+            li a
+            li a
+            li a
+    main(class='row')
+      section(class='col-7 bg-yellow')
+        p Some text
+        p Some text
+        p Some text
+      aside(class='col-5 bg-red')
+        p Some text
+        p Some text
+        p Some text

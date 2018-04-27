@@ -1,0 +1,66 @@
+@import '../css/bootstrap/bootstrap';
+@import '../css/bootstrap/bootstrap-reboot.min';
+@import 'temp';
+
+
+* {
+  font-size: 10px;
+}
+
+h1{
+  font-size: 3rem;  
+}
+h2{
+  font-size: 4rem;
+}
+h3{
+  font-size: 3rem;
+}
+
+.header-style{
+  height: 150px;
+  font-family: 'Roboto', sans-serif;
+  background: #000000;
+  border-bottom: 3px solid #dfc7c7;
+}
+
+.header-style__logo{
+  font-family: 'Roboto Slab', serif;
+  overflow: hidden;
+  top: 50%;
+  transform:translateY(-50%);
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: #000000;
+  border: 10px solid #ffffff;
+  .header-style__logo__text{
+    position: relative;
+    &--first{
+      top: 0px;
+      left: 0px;
+    }
+    &--second{
+      top: 0px;
+      left: 0px;
+    }
+    h2 {
+      margin: 0;
+      line-height: 100%;
+    }
+    h3 {
+      margin: 0;
+      line-height: 100%;
+    }
+  }
+}
+
+.header-style__logo__inside{
+  position: relative;
+  width: 100%;
+  height: 10%;
+}
+.header-style__text{
+  color: #ffffff;
+  font-weight: bold;
+}
