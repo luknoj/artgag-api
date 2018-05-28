@@ -13,6 +13,7 @@
     "pug": "^2.0.3"
   },
   "scripts": {
+    "start": "node server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch-css": "node-sass-chokidar ./public/scss/api.scss -o ./public/css --watch"
   },
