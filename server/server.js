@@ -43,7 +43,7 @@ app.get('/api/user/:userId/posts', userController.getUserPosts);
 app.get('/api/user/:userId/', userController.getPublicProfile);
 
 app.get('/', (req,res) => {
-    res.render('index', { title: 'Artgag API', message: 'Welcome to Artgag API documentation'});
+    res.render('index', { title: 'Artgag API', message: 'Artgag API documentation'});
 })
 
 app.listen(PORT, function (err) {

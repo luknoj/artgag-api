@@ -1,10 +1,11 @@
 var mysql = require('mysql');
 
 var con = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: '',
-    database: 'project'
+    host: process.env.DB_HOST,
+    user: process.env.DB_USERNAME,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_DATABASE,
+    connectTimeout: 60000
 });
 
 con.connect( function(err){
@@ -12,6 +13,8 @@ con.connect( function(err){
         console.log("Database connected");
     }else {
         console.log("Error while connecting with database \n");
+        console.log(err);
+        
     }
 });
 

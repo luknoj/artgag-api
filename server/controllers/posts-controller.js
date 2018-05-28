@@ -12,7 +12,7 @@ module.exports.uploadPost = function (req, res) {
   const options = {
     "baseURL": 'https://api.imgur.com',
     "headers": {
-      "Authorization": "Bearer "
+      "Authorization": "Bearer " + process.env.IMGUR_APIKEY
     }
   }
   axios.post('/3/image', data, options)
@@ -59,7 +59,7 @@ module.exports.getPosts = function (req,res){
  });
 };
 module.exports.getRanking = function (req, res) {
-  con.query("SELECT articles.*, SUM(rating.rate) AS rating FROM articles LEFT JOIN rating ON rating.postId = articles.post_id GROUP BY rating.postId LIMIT 10", function (error, results, fields) {
+  con.query("SELECT articles.*, SUM(rating.rate) AS rating FROM articles LEFT JOIN rating ON rating.postId = articles.post_id GROUP BY rating.postId, articles.post_id LIMIT 10", function (error, results, fields) {
     if(error) {
       res.json({
         error
