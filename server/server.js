@@ -5,7 +5,7 @@ const cors = require('cors');
 let app = express();
 const pug = require('pug');
 
-const PORT = process.env.PORT || 3000;
+// const PORT = process.env.PORT || 3000;
 
 var loginController = require('./controllers/login-controller');
 var registerController = require('./controllers/register-controller');
@@ -46,7 +46,7 @@ app.get('/', (req,res) => {
     res.render('index', { title: 'Artgag API', message: 'Artgag API documentation'});
 })
 
-app.listen(PORT, function (err) {
+app.listen(process.env.PORT || 3000, function (err) {
     if(!err){
         console.log("Server running on port 8000");
     } else {
